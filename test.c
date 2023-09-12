@@ -1,8 +1,8 @@
 #define TELEGRAM_TOKEN "YOURAPITOKEN"
 #define TELEGRAM_CHATID "YOURCHATID"
-#include "telenote.h"
+#include "teleprintf.h"
 
 int main() {
-    tnotify("My important notification!");
+    tprintf("This is a test message with a number: %d and a string: %s", 42, "hello world");
     return 0;
 }
