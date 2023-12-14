@@ -2,7 +2,7 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 
 # Target executable name
 TARGET = test
@@ -16,10 +16,10 @@ OBJECTS = $(SOURCES:.c=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(TARGET) -lcurl
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:
 	rm -f $(OBJECTS) $(TARGET)
