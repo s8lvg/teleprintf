@@ -79,7 +79,7 @@ static void tprintf(const char *format, ...) {
     return;
   }
 
-  snprintf(post_params, post_param_len, "chat_id=%s&text=\"%s\"",
+  snprintf(post_params, post_param_len, "chat_id=%s&text=%s",
            TELEGRAM_CHATID, message);
 
   CURL *curl;
